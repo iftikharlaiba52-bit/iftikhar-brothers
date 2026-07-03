@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iftikhar Brothers | Pesticides, Fertilizers &amp; Seeds</title>
+<meta name="description" content="Iftikhar Brothers - Trusted supplier of quality pesticides, fertilizers and seeds. Order directly on WhatsApp or call now.">
+
+<!-- ============================================================
+     EDIT ME: Google Fonts (no changes needed unless you want
+     different fonts)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     DESIGN TOKENS - change colors/fonts here and they update
+     everywhere on the site automatically
+     ============================================================ */
+  :root{
+    --green-deep:   #1F3D2B;   /* header, footer, primary */
+    --green-mid:    #2F5233;   /* hover states */
+    --paper:        #F6F1E4;   /* page background */
+    --ink:          #24261F;   /* body text */
+    --ink-soft:     #55584C;   /* secondary text */
+    --wheat:        #C99A3F;   /* accent / CTA */
+    --wheat-dark:   #A87C2A;   /* CTA hover */
+    --rust:         #A13D2D;   /* safety / warning accent, used sparingly */
+    --card:         #FFFFFF;
+    --line:         #DFD6BE;
+
+    --font-display: 'Oswald', sans-serif;
+    --font-body:    'Public Sans', sans-serif;
+    --font-mono:    'IBM Plex Mono', monospace;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+
+  h1,h2,h3{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    color:var(--green-deep);
+    line-height:1.15;
+  }
+
+  .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* -------------------- Focus visibility -------------------- */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--wheat);
+    outline-offset:2px;
+  }
+
+  /* -------------------- Header / Nav -------------------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--green-deep);
+    border-bottom:3px solid var(--wheat);
+  }
+  .nav-wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+    max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    color:#fff;
+  }
+  .brand-mark{ width:38px; height:38px; flex-shrink:0; }
+  .brand-text{
+    font-family:var(--font-display);
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+  }
+  .brand-text small{
+    display:block;
+    font-family:var(--font-body);
+    font-size:0.62rem;
+    letter-spacing:0.12em;
+    color:var(--wheat);
+    font-weight:600;
+    text-transform:uppercase;
+  }
+  nav ul{ display:flex; gap:28px; }
+  nav a{
+    color:#EFE9D8; font-weight:600; font-size:0.92rem;
+    text-transform:uppercase; letter-spacing:0.04em;
+    padding:6px 2px; border-bottom:2px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  nav a:hover{ color:var(--wheat); border-color:var(--wheat); }
+  .nav-toggle{
+    display:none; background:none; border:none; cursor:pointer;
+    width:38px; height:38px; position:relative;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+    content:''; position:absolute; left:8px; right:8px; height:3px;
+    background:#fff; border-radius:2px; transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle span{ top:18px; }
+  .nav-toggle span::before{ top:-9px; }
+  .nav-toggle span::after{ top:9px; }
+  .nav-toggle.open span{ background:transparent; }
+  .nav-toggle.open span::before{ transform:translateY(9px) rotate(45deg); }
+  .nav-toggle.open span::after{ transform:translateY(-9px) rotate(-45deg); }
+
+  @media (max-width:760px){
+    nav{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--green-deep);
+      max-height:0; overflow:hidden;
+      transition:max-height .28s ease;
+      border-bottom:3px solid var(--wheat);
+    }
+    nav.open{ max-height:320px; }
+    nav ul{ flex-direction:column; gap:0; padding:8px 24px 18px; }
+    nav a{ display:block; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); }
+    .nav-toggle{ display:block; }
+  }
+
+  /* -------------------- Field-row divider (signature motif) -------------------- */
+  .rows-divider{ width:100%; display:block; line-height:0; }
+  .rows-divider svg{ width:100%; height:auto; display:block; }
+
+  /* -------------------- Hero -------------------- */
+  .hero{
+    position:relative;
+    background:var(--green-deep);
+    color:#fff;
+    padding:64px 0 0;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:32px; align-items:center;
+    max-width:1120px; margin:0 auto; padding:0 24px 56px;
+  }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.14em;
+    color:var(--wheat); text-transform:uppercase; margin-bottom:14px; display:block;
+  }
+  .hero h1{
+    color:#fff; font-size:clamp(2.1rem, 5vw, 3.4rem); margin-bottom:18px;
+  }
+  .hero h1 em{ font-style:normal; color:var(--wheat); }
+  .hero p{
+    color:#D9D2BC; font-size:1.05rem; max-width:46ch; margin-bottom:30px;
+  }
+  .cta-row{ display:flex; flex-wrap:wrap; gap:14px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--font-body); font-weight:700; font-size:0.95rem;
+    padding:14px 24px; border-radius:6px; border:2px solid transparent;
+    cursor:pointer; transition:transform .15s ease, background .2s ease, border-color .2s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--wheat); color:var(--green-deep); }
+  .btn-primary:hover{ background:var(--wheat-dark); }
+  .btn-outline{ background:transparent; color:#fff; border-color:#fff; }
+  .btn-outline:hover{ background:#fff; color:var(--green-deep); }
+  .btn svg{ width:20px; height:20px; }
+
+  .hero-art{ position:relative; }
+  .hero-art svg{ width:100%; height:auto; }
+
+  /* -------------------- Trust strip -------------------- */
+  .trust-strip{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .trust-strip .container{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    padding:26px 24px;
+  }
+  .trust-item{ display:flex; gap:12px; align-items:flex-start; }
+  .trust-item svg{ width:26px; height:26px; flex-shrink:0; color:var(--green-mid); }
+  .trust-item strong{ display:block; font-size:0.95rem; color:var(--ink); }
+  .trust-item span{ font-size:0.85rem; color:var(--ink-soft); }
+  @media (max-width:760px){
+    .trust-strip .container{ grid-template-columns:1fr; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-art{ order:-1; max-width:320px; margin:0 auto; }
+  }
+
+  /* -------------------- Section shell -------------------- */
+  section{ padding:72px 0; }
+  .section-head{ max-width:640px; margin-bottom:44px; }
+  .section-head .eyebrow{ color:var(--rust); }
+  .section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom:12px; }
+  .section-head p{ color:var(--ink-soft); }
+
+  section.alt{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
+  /* -------------------- Product categories -------------------- */
+  .cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:900px){ .cat-grid{ grid-template-columns:1fr; } }
+
+  .sack-card{
+    background:var(--card);
+    border:2px dashed var(--line);
+    border-radius:10px;
+    padding:26px;
+    position:relative;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .sack-card:hover{ border-color:var(--wheat); transform:translateY(-4px); }
+  .sack-icon{
+    width:52px; height:52px; margin-bottom:16px; color:var(--green-deep);
+  }
+  .sack-card h3{ font-size:1.2rem; margin-bottom:8px; }
+  .sack-card p{ color:var(--ink-soft); font-size:0.92rem; margin-bottom:16px; }
+  .sack-list{ margin-bottom:18px; }
+  .sack-list li{
+    font-size:0.88rem; color:var(--ink); padding:6px 0;
+    border-bottom:1px dashed var(--line);
+    display:flex; justify-content:space-between; gap:10px;
+  }
+  .sack-list li:last-child{ border-bottom:none; }
+  .sack-list .price{ font-family:var(--font-mono); font-size:0.82rem; color:var(--ink-soft); white-space:nowrap; }
+
+  .order-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:700; font-size:0.88rem; color:var(--green-mid);
+    border-bottom:2px solid var(--wheat); padding-bottom:2px;
+  }
+  .order-link svg{ width:16px; height:16px; }
+  .order-link:hover{ color:var(--wheat-dark); }
+
+  /* -------------------- How to order -------------------- */
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; counter-reset:step; }
+  @media (max-width:900px){ .steps{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .steps{ grid-template-columns:1fr; } }
+  .step{ position:relative; padding-top:8px; }
+  .step-num{
+    font-family:var(--font-display); font-size:2.4rem; color:var(--wheat);
+    -webkit-text-stroke:1.5px var(--green-deep);
+    line-height:1; margin-bottom:10px;
+  }
+  .step h3{ font-size:1rem; margin-bottom:6px; }
+  .step p{ font-size:0.88rem; color:var(--ink-soft); }
+
+  .pay-methods{ display:flex; flex-wrap:wrap; gap:14px; margin-top:36px; }
+  .pay-chip{
+    display:flex; align-items:center; gap:10px;
+    background:var(--paper); border:1px solid var(--line); border-radius:30px;
+    padding:10px 18px; font-size:0.88rem; font-weight:600; color:var(--ink);
+  }
+  .pay-chip svg{ width:18px; height:18px; color:var(--green-mid); }
+
+  /* -------------------- About -------------------- */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-grid p{ color:var(--ink-soft); margin-bottom:16px; }
+  .stat-row{ display:flex; gap:32px; margin-top:24px; flex-wrap:wrap; }
+  .stat{ }
+  .stat strong{ display:block; font-family:var(--font-display); font-size:1.8rem; color:var(--green-deep); }
+  .stat span{ font-size:0.82rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; }
+
+  /* -------------------- Safety notice -------------------- */
+  .safety-box{
+    background:#FBF0EC; border-left:4px solid var(--rust);
+    border-radius:6px; padding:22px 24px; display:flex; gap:16px; align-items:flex-start;
+  }
+  .safety-box svg{ width:28px; height:28px; color:var(--rust); flex-shrink:0; }
+  .safety-box p{ font-size:0.9rem; color:var(--ink); }
+  .safety-box strong{ display:block; margin-bottom:4px; color:var(--rust); font-family:var(--font-display); text-transform:uppercase; letter-spacing:0.03em; font-size:0.95rem; }
+
+  /* -------------------- Contact -------------------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px; padding:30px;
+  }
+  .contact-row{ display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid var(--line); }
+  .contact-row:last-child{ border-bottom:none; }
+  .contact-row svg{ width:22px; height:22px; color:var(--green-mid); flex-shrink:0; margin-top:2px; }
+  .contact-row strong{ display:block; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); }
+  .contact-row span, .contact-row a{ font-size:1rem; font-weight:600; }
+  .contact-row a:hover{ color:var(--wheat-dark); }
+
+  .map-wrap{ border-radius:10px; overflow:hidden; border:1px solid var(--line); min-height:260px; }
+  .map-wrap iframe{ width:100%; height:100%; min-height:260px; border:0; }
+
+  /* -------------------- Footer -------------------- */
+  footer{ background:var(--green-deep); color:#D9D2BC; padding:40px 0 24px; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,.12); }
+  footer .brand-text{ color:#fff; }
+  .footer-links{ display:flex; gap:22px; flex-wrap:wrap; }
+  .footer-links a{ font-size:0.9rem; }
+  .footer-links a:hover{ color:var(--wheat); }
+  .footer-bottom{ padding-top:20px; font-size:0.8rem; color:#A7A08A; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+  /* -------------------- WhatsApp floating button -------------------- */
+  .float-wa{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    transition:transform .2s ease;
+  }
+  .float-wa:hover{ transform:scale(1.08); }
+  .float-wa svg{ width:28px; height:28px; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header>
+  <div class="nav-wrap">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="23" fill="#C99A3F"/>
+        <path d="M24 8C24 8 14 16 14 26C14 32.6274 18.4772 38 24 38C29.5228 38 34 32.6274 34 26C34 16 24 8 24 8Z" fill="#1F3D2B"/>
+        <path d="M24 15V33" stroke="#C99A3F" stroke-width="2"/>
+        <path d="M24 20L19 24M24 20L29 24M24 26L19 30M24 26L29 30" stroke="#C99A3F" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Iftikhar Brothers<small>Pesticides &middot; Fertilizers &middot; Seeds</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#how-to-order">How to Order</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<div id="top"></div>
+<section class="hero" style="padding-bottom:0;">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Trusted since your grandfather's generation</span>
+      <h1>Better crops start with <em>better inputs.</em></h1>
+      <p>Iftikhar Brothers supplies quality pesticides, fertilizers and seeds to farmers across the region — genuine products, fair prices, and advice from people who actually know the fields.</p>
+      <div class="cta-row">
+        <!-- EDIT ME: replace 923006809919 with your WhatsApp number in international format (no + or spaces) -->
+        <a class="btn btn-primary" href="https://wa.me/923006809919?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20order%20from%20Iftikhar%20Brothers" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58ZM12.06 18.4h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.62 6.62 0 0 1 10.3-8.2 6.56 6.56 0 0 1 1.95 4.68 6.63 6.63 0 0 1-6.65 6.62Zm3.63-4.96c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.63.77-.11.13-.23.15-.43.05-.2-.1-.83-.3-1.58-.97a5.9 5.9 0 0 1-1.09-1.35c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.61-1.48-.16-.38-.33-.33-.45-.34h-.38c-.13 0-.34.05-.52.25-.18.2-.68.66-.68 1.6 0 .95.7 1.86.8 1.99.1.13 1.37 2.1 3.33 2.94.46.2.83.32 1.11.4.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.85.12-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+          Order on WhatsApp
+        </a>
+        <!-- EDIT ME: replace 0300-6809919 with your call number -->
+        <a class="btn btn-outline" href="tel:0300-6809919">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="150" r="140" fill="#2F5233"/>
+        <g stroke="#C99A3F" stroke-width="6" stroke-linecap="round">
+          <path d="M110 220 Q200 190 290 220" fill="none"/>
+          <path d="M100 250 Q200 218 300 250" fill="none"/>
+          <path d="M95 280 Q200 246 305 280" fill="none"/>
+        </g>
+        <g>
+          <line x1="150" y1="120" x2="150" y2="215" stroke="#EFE9D8" stroke-width="5" stroke-linecap="round"/>
+          <line x1="200" y1="95" x2="200" y2="215" stroke="#EFE9D8" stroke-width="5" stroke-linecap="round"/>
+          <line x1="250" y1="120" x2="250" y2="215" stroke="#EFE9D8" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="150" cy="112" rx="14" ry="20" fill="#C99A3F"/>
+          <ellipse cx="200" cy="88" rx="14" ry="20" fill="#C99A3F"/>
+          <ellipse cx="250" cy="112" rx="14" ry="20" fill="#C99A3F"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="rows-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 40 L0 20 Q50 0 100 20 T200 20 T300 20 T400 20 T500 20 T600 20 T700 20 T800 20 T900 20 T1000 20 T1100 20 T1200 20 L1200 40 Z" fill="#F6F1E4"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     TRUST STRIP
+     ============================================================ -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>
+      <div><strong>100% Genuine Stock</strong><span>Sourced directly from licensed distributors</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <div><strong>Fast Local Delivery</strong><span>Same-day dispatch on in-stock orders</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 9V7a5 5 0 0 0-10 0v2M5 9h14l-1 12H6L5 9z"/></svg>
+      <div><strong>Free Crop Advice</strong><span>Tell us your crop, we'll suggest the right product</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRODUCTS
+     ============================================================ -->
+<section id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we stock</span>
+      <h2>Everything for your field, in one place</h2>
+      <p>Prices vary with pack size and season — message us on WhatsApp with your crop and quantity for an exact quote and current availability.</p>
+    </div>
+
+    <div class="cat-grid">
+
+      <!-- PESTICIDES -->
+      <div class="sack-card">
+        <svg class="sack-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 6L36 12V22C36 32 24 42 24 42C24 42 12 32 12 22V12L24 6Z" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M18 24L22 28L30 18" stroke="#C99A3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Pesticides</h3>
+        <p>Insecticides, herbicides &amp; fungicides for major crops.</p>
+        <ul class="sack-list">
+          <li><span>Insecticides (sucking &amp; chewing pests)</span></li>
+          <li><span>Herbicides (weed control)</span></li>
+          <li><span>Fungicides (disease control)</span></li>
+          <li><span class="price">Call for current rates</span></li>
+        </ul>
+        <a class="order-link" href="https://wa.me/923006809919?text=I%20want%20to%20order%20Pesticides%2C%20please%20share%20available%20brands%20and%20rates." target="_blank" rel="noopener">
+          Ask about Pesticides
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- FERTILIZERS -->
+      <div class="sack-card">
+        <svg class="sack-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="14" width="24" height="26" rx="2" stroke="#1F3D2B" stroke-width="2.5"/>
+          <path d="M12 20H36" stroke="#1F3D2B" stroke-width="2.5"/>
+          <path d="M18 14V10C18 8.34315 19.3431 7 21 7H27C28.6569 7 30 8.34315 30 10V14" stroke="#1F3D2B" stroke-width="2.5"/>
+          <path d="M20 27L24 23L28 27" stroke="#C99A3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 23V33" stroke="#C99A3F" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Fertilizers</h3>
+        <p>Urea, DAP, NPK blends and micronutrients.</p>
+        <ul class="sack-list">
+          <li><span>Urea (46% N)</span></li>
+          <li><span>DAP</span></li>
+          <li><span>NPK / Compound blends</span></li>
+          <li><span class="price">Call for current rates</span></li>
+        </ul>
+        <a class="order-link" href="https://wa.me/923006809919?text=I%20want%20to%20order%20Fertilizer%2C%20please%20share%20available%20types%20and%20rates." target="_blank" rel="noopener">
+          Ask about Fertilizers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- SEEDS -->
+      <div class="sack-card">
+        <svg class="sack-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 40C24 40 10 32 10 20C10 13.3726 15.3726 8 22 8C22 8 24 20 24 40Z" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M24 40C24 40 38 32 38 20C38 13.3726 32.6274 8 26 8C26 8 24 20 24 40Z" stroke="#C99A3F" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <h3>Seeds</h3>
+        <p>Certified wheat, maize, cotton and vegetable seed varieties.</p>
+        <ul class="sack-list">
+          <li><span>Wheat &amp; Maize varieties</span></li>
+          <li><span>Cotton seed</span></li>
+          <li><span>Vegetable seeds</span></li>
+          <li><span class="price">Call for current rates</span></li>
+        </ul>
+        <a class="order-link" href="https://wa.me/923006809919?text=I%20want%20to%20order%20Seeds%2C%20please%20share%20available%20varieties%20and%20rates." target="_blank" rel="noopener">
+          Ask about Seeds
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW TO ORDER
+     ============================================================ -->
+<section class="alt" id="how-to-order">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Simple, no app needed</span>
+      <h2>How to order</h2>
+      <p>No account, no online payment required to get started — just message or call us.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Message us</h3>
+        <p>Send your crop, product and quantity on WhatsApp or call directly.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Get a quote</h3>
+        <p>We confirm exact price and availability the same day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Confirm &amp; pay</h3>
+        <p>Pay via Cash on Delivery, JazzCash, EasyPaisa, kisaan card or bank transfer.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Receive your order</h3>
+        <p>Local delivery or pickup from our shop — your choice.</p>
+      </div>
+    </div>
+
+    <div class="pay-methods">
+      <div class="pay-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Cash on Delivery</div>
+      <div class="pay-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg> JazzCash</div>
+      <div class="pay-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg> EasyPaisa</div>
+      <div class="pay-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg> Bank Transfer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--rust);">Who we are</span>
+      <h2 style="margin-bottom:16px;">Farmers trust us because we're farmers too</h2>
+      <!-- EDIT ME: replace with your real story -->
+      <p>Iftikhar Brothers has been supplying agricultural inputs to farmers in our area, built on straightforward advice, genuine products, and fair pricing. We know the difference a good fertilizer schedule or the right pesticide at the right time can make to a harvest — that's why we stock only what we'd use ourselves.</p>
+      <p>Whether you're managing half an acre or fifty, we treat every order with the same attention.</p>
+      <div class="stat-row">
+        <div class="stat"><strong>500+</strong><span>Farmers Served</span></div>
+        <div class="stat"><strong>3</strong><span>Product Categories</span></div>
+        <div class="stat"><strong>Same-Day</strong><span>Local Delivery</span></div>
+      </div>
+    </div>
+    <div class="safety-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86l-8.4 14.55A1 1 0 0 0 2.71 20h18.58a1 1 0 0 0 .87-1.59L13.71 3.86a1 1 0 0 0-1.72 0z"/></svg>
+      <p><strong>Safe Use Reminder</strong>Always follow label instructions, use protective gear when applying pesticides, and keep products out of reach of children. Ask us if you're unsure about the correct dosage for your crop.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="alt" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Visit, call, or message us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Shop Address</strong><span><!-- EDIT ME --> Park Road, [liaquatpur], Punjab, Pakistan</span></div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><strong>Phone</strong><a href="tel:0300-6809919"><!-- EDIT ME -->0300-1234567</a></div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58Z"/></svg>
+          <div><strong>WhatsApp</strong><a href="https://wa.me/923006809919" target="_blank" rel="noopener"><!-- EDIT ME -->0300-1234567</a></div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <div><strong>Shop Hours</strong><span>Mon – sun: 8:00 AM – 8:00 PM</span></div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <!-- EDIT ME: go to Google Maps, search your shop/area, click Share > Embed a map, and paste the src link below -->
+        <iframe src="https://www.google.com/maps?q=Multan,Punjab,Pakistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shop location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <span class="brand-text">Iftikhar Brothers<small style="color:var(--wheat);">Pesticides &middot; Fertilizers &middot; Seeds</small></span>
+      <div class="footer-links">
+        <a href="#products">Products</a>
+        <a href="#how-to-order">How to Order</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Iftikhar Brothers. All rights reserved.</span>
+      <span>Made with care for the growers who feed us all.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a class="float-wa" href="https://wa.me/923006809919" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
